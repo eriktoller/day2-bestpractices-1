@@ -10,6 +10,7 @@ print:  0.011966705322265625
 see also: matmult.py.lprof (different run than values above)
 
 MEMMORY: the last nested for loop has the highest memory use.
+see memory_matmult.txt
 
 b. Investigate the performance of the euler72.py script
 In which line(s) of the script would you start optimizing for speed? Which line(s) create the most memory?
