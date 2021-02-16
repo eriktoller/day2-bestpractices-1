@@ -1,0 +1,28 @@
+a. Investigate the performance of the matmult.py script
+In which line(s) of the script would you start optimizing for speed? Which line(s) create the most memory?
+
+SPEED: the for loops are the slowest, especially the results loop
+X-loop:  0.0510101318359375
+Y-loop:  0.05208277702331543
+reslut initiate loop:  0.0013136863708496094
+Result calculation loop:  3.489882707595825
+print:  0.011966705322265625
+see also: matmult.py.lprof (different run than values above)
+
+MEMMORY: the last nested for loop has the highest memory use.
+
+b. Investigate the performance of the euler72.py script
+In which line(s) of the script would you start optimizing for speed? Which line(s) create the most memory?
+
+SPEED: the factorize function (especially the if-sqrt function). I would use another condition, e.g. comapring the squared results rather than the sqaure root.
+See also: euler72.py.lprof
+
+MEMMORY: the factorize function with the for and nested while loop
+See memory_euler72.txt
+
+c. Improve the performance of the matmult.py script
+What is the best performance that you achieved with N=250?
+
+By rewriting with numpy and removing all of the for loops
+total time: 0.12977361679077148 s
+original function: 4.0346596240997314 s
